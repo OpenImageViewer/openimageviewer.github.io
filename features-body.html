@@ -1,8 +1,5 @@
-    <div class="columns is-fullwidth is-left ">
-        <div class="column is-2  slide-in-left">
-
-        </div>
-                <div class="column is-4  slide-in-left">
+    <div class="columns is-centered">
+                <div class="column is-10-tablet is-9-widescreen slide-in-left">
                     <h2 class="title is-3">
                         Open Image Viewer Feature Highlights
                     </h2>
@@ -16,174 +13,167 @@
                                  </thead>
                                  <tbody>
                                         <tr>
-                                        <td>True support for exotic image formats</td>
-                                        <td><b>Non destructive  and no data loss</b> for unusual formats for professionals such as int 64 bit, int 24 bit, float 16/24/32 bit, etc.</td>
-                                        <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Infinite zoom steps</td>
-                                            <td>Sensing how much zoom to apply when the user interacts with the mouse wheel. virtually allows infinite zoom steps</td>
+                                            <td>Fast browsing</td>
+                                            <td>Read-ahead loading, quick browse (~100 ms per image while holding the mouse navigation buttons),
+                                                sorting by name / date / extension in ascending or descending order, and slideshows.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Infinite panning</td>
-                                            <td>Low level input techniques allow to “move” the mouse far beyond the edges of the monitor
-                                            </td>
+                                            <td>Zoom &amp; pan</td>
+                                            <td>High-precision zoom centered on the cursor and panning that can extend far beyond the edges of the monitor.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Quick browse</td>
-                                            <td>quickly run through the images in the folder promising an impression of 100ms while holding the mouse navigation buttons (backward and forward)</td>
-                                            <td></td>    
-                                        </tr>
-                                        <tr>
-                                            <td>Logarithmic Auto Scroll</td>
-                                            <td>user configurable logarithmic Auto Scroll allows for intuitive interaction</td>
-                                            <td></td>    
-                                        </tr>
-                                      <td>Quick paste</td>
-                                      <td>Double right mouse click to paste an image from the clipboard</td>
-                                      <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Fully open source</td>
-                                        <td>Open Image Viewer is completely free for non commercial use.</td>
-                                        <td></td>
-                                        </tr>
-                                    
-                                        <tr>
-                                            <td>No GUI</td>
-                                            <td>All operations are done via user configurable key bindings. press F1 for a detailed list.</br>
-                                                 Text is rendered into the display area and GUI is planned to be a downloadable extension.</td>
-                                            <td></td>
-                                        </tr>
-                                      <tr>
-                                        <td>Optimized selection rectangle</td>
-                                        <td>High performance and visually optimized selection rectangle to crop or copy part of the image</td>
-                                        <td><a href="https://www.youtube.com/watch?v=As9MhCOlGIU">Video Tutorial</a> </td>
-                                        </tr>
-                                      <tr>
-                                        <td>Persistence view</td>
-                                        <td>keep image zoom and position unchanged when loading a new file.</br>Useful for example, when analyzing similar sized images</td>
-                                        <td></td>    
-                                    </tr>
-                                 
-                                    <tr>
-                                        <td>Multiple modified file reload mode</td>
-                                        <td>four types of reload mode:
-                                        </br>1.don't reload</br>2.require user confirmation</br>3.load automatically when the application gets active.</br>4.load automatically in the background</td>
-                                        <td></td>    
-                                    </tr>
-                                    <tr>
-                                        <td>Instance reuse</td>
-                                        <td>Press the 'Esc' key to close to tray, at the next run, starting up a new instance will be spared.</td>
-                                        <td></td>    
-                                    </tr>
-                                    
-                                
-                                    <tr>
-                                        <td>Accurate Image and texel information</td>
-                                        <td>Show precise information about the image, the color channels data and order, and texel data as <b>found on disk</b></td>
-                                        <td></td>    
-                                    </tr>
-                                        
-                                        <tr>
-                                            <td>Multi size image support</td>
-                                            <td>Support for multi image formats such as DDS mipmaps, multi-size icon and multi-image Tiff, etc.</td>
+                                            <td>Animated images</td>
+                                            <td>GIF, APNG and WebP animation playback with adjustable speed.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Deferred initialization</td>
-                                            <td>Much of the startup execution is deferred after the initial image has been displayed</td>
+                                            <td>Subimage navigation</td>
+                                            <td>Step through mipmaps, icon sizes and multi-image files (e.g. multi-page TIFF) with Alt+scroll.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Hardware color correction </td>
-                                            <td>Gamma, exposure, Offset and Saturation are executed on the GPU</td>
+                                            <td>Texel grid &amp; pixel values</td>
+                                            <td>Toggleable texel grid with two colors for clear visualization in any scenario,
+                                                per-pixel values and sub-texel position of the mouse cursor.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Downscaling</td>
-                                            <td>Improve the quality for large images when zooming out using an asynchronous box filter to eliminate aliasing</td>
+                                            <td>Accurate image and texel information</td>
+                                            <td>Precise information about the image: dimensions, color channels and their order, file size and
+                                                compression ratio, and the texel data as <b>found on disk</b>.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>On Screen display</td>
-                                            <td>Notification message for every operation is rendered directly into the image</td>
+                                            <td>EXIF metadata</td>
+                                            <td>Embedded EXIF camera metadata, displayed next to the image information.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>32 bit clipboard support</td>
-                                            <td>Copy and paste to/from the clipboard with a transparency channel. It may seem trivial but many renowned applications don't support it</td>
+                                            <td>Hardware color correction</td>
+                                            <td>Gamma, exposure, offset and saturation are executed on the GPU and can be toggled instantly.</td>
                                             <td></td>
                                         </tr>
-                                        <tr>
-                                            <td>Checkerboard background</td>
-                                            <td>The background of the image is a black/blue checkerboard grid.
-                                                This helps to identify the edges of an image in case the image edge color is persistent and is the same as the background color</td>
-                                                <td></td>
-                                            </tr>
                                         <tr>
                                             <td>Grayscale / Rainbow normalization</td>
-                                            <td>Images that cannot be directly converted to RGB (the monitor format) usually have to be normalized either to grayscale (black-to-white) or either to a colorful (rainbow) image (red to magenta, via the primary colors green and blue)</td>
-                                            <td><a href="https://www.youtube.com/watch?v=dAKTkNGjo5s">Video Tutorial</a> </td>
+                                            <td>Non-destructive normalization of images that cannot be directly converted to RGB
+                                                (e.g. 16/24/32/64 bit integer and 16/24/32 bit float channels) either to grayscale
+                                                (black-to-white) or to rainbow colors.</td>
+                                            <td><a href="https://www.youtube.com/watch?v=dAKTkNGjo5s"><i class="fab fa-youtube"></i> Video Tutorial</a> </td>
                                         </tr>
                                         <tr>
                                             <td>Multiple transparency modes</td>
-                                            <td>Four transparency checkerboard visualization modes: light, medium, dark and darker. Helps to clearly visualize transparency for images with different luminosity</td>
-                                            <td><a href="https://www.youtube.com/watch?v=_ww9CIk5IWM">Video Tutorial</a> </td>
+                                            <td>Four transparency checkerboard visualization modes: light, medium, dark and darker.
+                                                Helps to clearly visualize transparency for images with different luminosity.</td>
+                                            <td><a href="https://www.youtube.com/watch?v=_ww9CIk5IWM"><i class="fab fa-youtube"></i> Video Tutorial</a> </td>
                                         </tr>
                                         <tr>
-                                            <td>Borderless  mode</td>
-                                            <td>Completely remove the window frame for utilizing more screen space</td>
+                                            <td>Optimized selection rectangle</td>
+                                            <td>High performance, pixel-grid-snapped selection rectangle with a live size label to crop or copy part of the image.</td>
+                                            <td><a href="https://www.youtube.com/watch?v=As9MhCOlGIU"><i class="fab fa-youtube"></i> Video Tutorial</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td>32 bit clipboard support</td>
+                                            <td>Copy, cut and paste to/from the clipboard with a transparency channel. It may seem trivial
+                                                but many renowned applications don't support it.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>Easy drag</td>
-                                            <td>Drag the window from anywhere, not just from the title</td>
-                                            <td></td>
-                                         <tr>
-                                            <td>Easy resize</td>
-                                            <td>resize the window from anywhere not just from the borders by holding the CTRL key</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pixel grid</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Texel / sub-texel position</td>
-                                            <td>Displays the sub-texel position of the image where the mouse is positioned.</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Multi-full-screen </td>
-                                            <td>Allows to span an image across several monitors even with different resolutions</td>
-                                            <td><a href="https://www.youtube.com/watch?v=tYI7K7tj0wk">Video Tutorial</a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Auto on top</td>
-                                            <td>keep the window on top for three seconds so it won’t hide behind other windows. Useful for drag and drop</td>
+                                            <td>Quick paste</td>
+                                            <td>Double right mouse click to paste an image from the clipboard.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
                                             <td>Conservative axis aligned transformations</td>
-                                            <td>Axis aligned transformations such as rotation and flip are resolved according to the initial transformation state while keeping rotation as the primary operation.<br/>
-                                                For example, flipping an image <b>horizontally</b> and then rotating it 90 degrees clockwise will be resolved and <b>reported to the user</b> as a  transformation that is rotated 90 degrees clockwise and flipped <b>vertically</b></td>
-                                                <td></td>
-                                            </tr>
-                                        <tr>
-                                            <td>C API image viewing engine</td>
-                                            <td> Open image viewer is also a C API image viewing engine, use it in your application</td>
+                                            <td>Axis aligned transformations such as rotation and flip are resolved according to the initial
+                                                transformation state while keeping rotation as the primary operation.<br/>
+                                                For example, flipping an image <b>horizontally</b> and then rotating it 90 degrees clockwise will be
+                                                resolved and <b>reported to the user</b> as a transformation that is rotated 90 degrees clockwise and
+                                                flipped <b>vertically</b>.</td>
                                             <td></td>
                                         </tr>
-                                        
-
-                                        
+                                        <tr>
+                                            <td>Save images</td>
+                                            <td>Save the visible image (with corrections and transformations applied) as JPEG or PNG.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Renderer backends</td>
+                                            <td>Direct3D 11, Vulkan and OpenGL backends with automatic GPU selection:
+                                                Windows prefers Direct3D 11, Linux prefers Vulkan.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Keyboard-driven &amp; configurable</td>
+                                            <td>Every operation is a command. Remap shortcuts in KeyBindings.json and define new commands
+                                                in Commands.json. Press F1 for the list of active key bindings.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>On Screen display</td>
+                                            <td>File name, notifications and image information are rendered directly into the image area,
+                                                with no toolbars or dialogs in the way.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Window ergonomics</td>
+                                            <td>Borderless mode, drag the window from anywhere, resize it from the client area with the Ctrl key,
+                                                automatic "on top" window, and one-key window sizes (1-5).</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Close to tray</td>
+                                            <td>Press the 'Esc' key to close to tray; the next launch reuses the running instance instead of starting a new one.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Multi-full-screen</td>
+                                            <td>Allows to span an image across several monitors even with different resolutions.</td>
+                                            <td><a href="https://www.youtube.com/watch?v=tYI7K7tj0wk"><i class="fab fa-youtube"></i> Video Tutorial</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Auto reload &amp; file watching</td>
+                                            <td>Four types of reload mode for files modified outside the viewer (Windows only):
+                                                don't reload, require user confirmation, load automatically when the application gets active,
+                                                or load automatically in the background. The working directory follows the file system.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Persistence view</td>
+                                            <td>Keep image zoom and position unchanged when loading a new file.
+                                                Useful, for example, when analyzing similar sized images.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Downscaling</td>
+                                            <td>Improve the quality for large images when zooming out using asynchronous box filtering and cubic
+                                                downsampling to eliminate aliasing.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Logarithmic Auto Scroll</td>
+                                            <td>User configurable logarithmic Auto Scroll allows for intuitive, hands-free inspection.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>True support for exotic image formats</td>
+                                            <td><b>Non destructive and no data loss</b> for unusual formats used by professionals
+                                                such as 16/24/32/64 bit integer and float 16/24/32 bit channels.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cross-platform</td>
+                                            <td>Native 64-bit Windows (7 SP1 and newer) and Linux builds from a single codebase.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fully open source</td>
+                                            <td>Open Image Viewer is completely free for non commercial use.</td>
+                                            <td></td>
+                                        </tr>
                                      </tbody>
                            </table>
                   
                 </div>   <!--class="colums"-->
             </div>  <!--class="columns"-->
- 

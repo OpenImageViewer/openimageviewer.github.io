@@ -38,13 +38,14 @@
 
 .movie_shade {
   box-shadow: 0.2rem 0.2rem 3rem 0.3rem rgb(15, 15, 15);
-  height: 23rem;
+  height: 100%;
   border-radius: 20px;
 }
 .movie-container {
   overflow: hidden;
   box-shadow: 0.2rem 0.2rem 3rem 0.3rem rgb(15, 15, 15);
-  height: 23rem;
+  height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 20px;
 }
 
@@ -79,6 +80,14 @@
   box-shadow: 0.2rem 1.2rem 3rem 0.1rem rgb(32, 32, 32);
   background-color: rgb(64, 64, 64);
   width: 100%;
+}
+
+/* Cards in a row should all render the same size: as inline-blocks each one
+   shrink-wraps its own content, so make them fill the stretched column.
+   20px = the 10px top and bottom margin .is-shady / .is-no-shade add. */
+.columns > .column > .card {
+  display: block;
+  height: calc(100% - 20px);
 }
 
 /* General card titile */
@@ -131,14 +140,14 @@ ul#performance {
 }
 
 .table thead th {
-  color: rgb(199, 197, 197);
+  color: #fff;
   background-color: rgb(88, 66, 41);
 }
 
 .table tr td {
   vertical-align: middle;
   text-align: left;
-  color: rgb(219, 219, 219);
+  color: #fff;
   background-color: rgb(70, 69, 69);
 }
 
@@ -147,7 +156,7 @@ ul#performance {
   font-weight: normal;
   text-align: center;
   background-color: rgb(37, 37, 51);
-  color: rgb(212, 209, 209);
+  color: #fff;
   font-weight: 600;
 
   /* color: rgb(0, 102, 34); */
@@ -157,7 +166,7 @@ ul#performance {
 /* Any child any row */
 .table tr:nth-child(even) td {
   background-color: rgb(54, 54, 54);
-  color: rgb(214, 214, 214);
+  color: #fff;
   /* font-weight: bold; */
   /* text-align: center; */
 }
@@ -165,6 +174,18 @@ ul#performance {
 .table tr:nth-child(even) td:first-child {
   text-align: center;
   background-color: rgb(35, 45, 47);
+}
+
+/* Row hover: Bulma 1.0 tints the whole row (its light-theme near-white), but the
+   cell backgrounds above hide it; highlight the cells in the header brown instead. */
+.table.is-hoverable tbody tr:hover td {
+  background-color: rgb(88, 66, 41);
+}
+
+/* Bulma 1.0 raised the default .title weight from 600 to 800 (extrabold);
+   restore the pre-1.0 look for every title via its theme variable. */
+:root {
+  --bulma-title-weight: var(--bulma-weight-semibold);
 }
 
 .is-main-title {
@@ -265,6 +286,7 @@ h5 {
 #features-page {
   margin-top: 2em;
   background-color: rgb(128, 65, 13);
+  color: #fff; /* Bulma 1.0 renders .button.is-success text near-black; the original was white */
 }
 
 a {
@@ -272,8 +294,7 @@ a {
 }
 
 a:hover {
-  color: rgb(74, 117, 199);
-  /* background-color: rgb(50, 89, 195); */
+  color: rgb(226, 139, 40);
 }
 
 @font-face {
@@ -408,4 +429,108 @@ html {
   background-color: #090909;
   /* height: fit-content(1em); */
   /* max-height: it-content(1em); */
+}
+
+/* Responsive tuning */
+#features-table td,
+#features-table th {
+  overflow-wrap: anywhere;
+}
+
+/* Keep the Feature and Tutorial columns from being crushed mid-word */
+#features-table td:first-child,
+#features-table th:first-child,
+#features-table td:last-child,
+#features-table th:last-child {
+  overflow-wrap: normal;
+}
+
+@media screen and (max-width: 480px) {
+  .bitcoin .is-inline-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .bitcoin-icon-wrap {
+    left: 0;
+  }
+  .bitcoin-text {
+    flex: 1 1 100%;
+    height: auto;
+  }
+  .bitcoin-address-text {
+    overflow-wrap: anywhere;
+  }
+
+  /* .is-large is 1.5rem and buttons don't wrap; "DOWNLOAD 0.18" + icons overflow a 320px screen */
+  .is-download-link {
+    font-size: 1.25rem;
+  }
+
+  /* Stack the feature chart into cards: 3 columns don't fit phone widths */
+  #features-table thead {
+    display: none;
+  }
+  #features-table,
+  #features-table tbody,
+  #features-table tr,
+  #features-table td {
+    display: block;
+  }
+  #features-table tr {
+    margin-bottom: 0.75rem;
+    border: 1px solid rgb(90, 90, 90);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  #features-table td {
+    border: none;
+  }
+  #features-table td:first-child {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+  }
+  #features-table td:empty {
+    display: none;
+  }
+}
+
+/* YouTube icon inside the tutorial links */
+#features-table a[href*="youtube.com/watch"] .fab {
+  margin-right: 0.4em;
+}
+
+/* The chart's own "Video Tutorial" links: the generic gray `a` color would
+   leave them darker than the now-white cell text. */
+#features-table a {
+  color: #fff;
+}
+
+/* The ID selector above outranks the global `a:hover`; keep the orange hover. */
+#features-table a:hover {
+  color: rgb(226, 139, 40);
+}
+
+/* The site's burger has 3 colored spans (red/green/blue). Bulma 1.0 puts
+   spans 1-2 both at the middle as X arms, hiding red behind green, and
+   fades span 3 when active. Restore the three-line layout. */
+.navbar-burger span:first-child {
+  top: calc(50% - 6px);
+}
+.navbar-burger span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+.navbar-burger span:nth-child(3) {
+  top: calc(50% + 4px);
+  bottom: auto;
+}
+.navbar-burger.is-active span:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+.navbar-burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-burger.is-active span:nth-child(3) {
+  opacity: 1;
+  transform: translateY(-5px) rotate(-45deg);
 }
